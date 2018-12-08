@@ -40,7 +40,7 @@ export default class FormValidator extends React.Component {
       isValidating: true
     });
 
-    let errors = await this.props.validate(this.state.values);
+    let errors = (await this.props.validate(this.state.values)) || {};
     let isValid = !Object.keys(errors).find(key => !!errors[key]);
 
     await new Promise(resolve =>
