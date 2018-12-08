@@ -1,0 +1,38 @@
+{
+  "name": "simple-react-form-validator",
+  "version": "1.0.0",
+  "main": "./lib/index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "babel src --out-dir lib --copy-files",
+    "format": "prettier --write \"./**/*.{js,md}\" && eslint . --fix",
+    "lint": "eslint .",
+    "prepack": "npm run build"
+  },
+  "dependencies": {
+    "prop-types": "^15.6.2",
+    "react": "^16.6.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.0",
+    "@babel/core": "^7.2.0",
+    "@babel/plugin-proposal-class-properties": "^7.2.1",
+    "@babel/preset-env": "^7.2.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.10.0",
+    "eslint-plugin-prettier": "^3.0.0",
+    "eslint-plugin-react": "^7.11.1",
+    "husky": "^1.2.0",
+    "lint-staged": "^8.1.0",
+    "prettier": "^1.15.3"
+  },
+  "lint-staged": {
+    "*.{js,md}": [
+      "prettier --write",
+      "eslint . --fix",
+      "git add"
+    ]
+  },
+  "browserslist": "> 1%, not IE 11"
+}

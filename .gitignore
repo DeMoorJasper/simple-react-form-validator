@@ -1,0 +1,7 @@
+node_modules
+*.lock
+*.log
+*-error.log
+.DS_Store
+junit.xml
+lib
